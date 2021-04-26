@@ -17,13 +17,14 @@ const rules = [
     use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
   },
   {
-    test: /\.(png|jpg|eot|woff|woff2|ttf|svg)$/,
+    test: /\.(png|jpeg|jpg|eot|woff|woff2|ttf)$/,
     use: [
       {
-        loader: "file-loader",
         options: {
-          outputPath: path.join("static", "media")
-        }
+          name: "[name].[ext]",
+          outputPath: "media/"
+        },
+        loader: "file-loader"
       }
     ]
   }
