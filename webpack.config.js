@@ -18,13 +18,7 @@ const rules = [
       MiniCssExtractPlugin.loader,
       "css-loader",
       "resolve-url-loader",
-      {
-        loader: "sass-loader",
-        options: {
-          sourceMap: true,
-          sourceMapContents: false
-        }
-      }
+      "sass-loader"
     ]
   },
   {
