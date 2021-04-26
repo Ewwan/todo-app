@@ -1,5 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const rules = [
   {
@@ -58,6 +59,12 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: `path.join('static', 'css')/[name].css`
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "source", to: "dest" },
+        { from: "other", to: "public" }
+      ]
     })
   ]
 };
