@@ -11,22 +11,7 @@ const rules = [
   },
   {
     test: /\.module\.s(a|c)ss$/,
-    loader: [
-      isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
-      {
-        loader: "css-loader",
-        options: {
-          modules: true,
-          sourceMap: isDevelopment
-        }
-      },
-      {
-        loader: "sass-loader",
-        options: {
-          sourceMap: isDevelopment
-        }
-      }
-    ]
+    use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
   },
   {
     test: /\.s(a|c)ss$/,
