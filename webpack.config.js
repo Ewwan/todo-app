@@ -31,16 +31,7 @@ const rules = [
   {
     test: /\.s(a|c)ss$/,
     exclude: [/\.module.(s(a|c)ss)$/],
-    loader: [
-      isDevelopment ? "style-loader" : MiniCssExtractPlugin.loader,
-      "css-loader",
-      {
-        loader: "sass-loader",
-        options: {
-          sourceMap: isDevelopment
-        }
-      }
-    ]
+    use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
   },
   {
     test: /\.(png|jpg|eot|woff|woff2|ttf|svg)$/,
