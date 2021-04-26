@@ -16,7 +16,7 @@ const rules = [
     exclude: [/\.module.(s(a|c)ss)$/],
     use: [
       MiniCssExtractPlugin.loader,
-      "css-loader",
+      "css-loader?url=false",
       "resolve-url-loader",
       "sass-loader"
     ]
