@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.root{
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  font-family: sans-serif;
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+  width: 20rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  border-radius: 0 0 0.2em 0.2em;
+
+  &__title {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family:'Roboto',sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    letter-spacing: 5px;
+    padding: 1.5rem;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    border-radius: 0.2em 0.2em 0 0;
+  
+    background: no-repeat url('/media/snow.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top; 
+    background-color: #cccccc;
+  }
+
+
+  &__section {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    border-radius: 0 0 0.2em 0.2em;
+  }
+}

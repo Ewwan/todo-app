@@ -1,0 +1,55 @@
+.add-todo {
+  text-align: center;
+  margin: 0.5em 0;
+  padding: 0;
+
+  &__form {
+    padding: 0.25em;
+    
+  }
+
+  &__form__input-field {
+    padding: 0.4em 1em;
+  }
+
+  &__button, 
+  &__form__input-field {
+    margin-bottom:0.3em;
+    display: inline-block;
+    border-radius:0.2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-size: 0.8rem;
+    font-weight:400;
+    box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+    text-align: left;
+    position: relative;
+    border: none;
+
+    &:focus {
+      border: none; 
+      outline: none;
+    }
+  }
+
+  &__button {
+      color:#FFFFFF;
+      background-color:#5194b5;
+      font-weight: 800;
+      border-radius: 0px;
+      padding: 0.4em 1em;
+
+      &:active {
+        box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+      border: none; 
+      }
+    }
+
+      @media all and (max-width:30em){
+      &__button{
+      display: block;
+      margin: 0.4em auto;
+      }
+    }
+}
