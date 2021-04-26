@@ -15,10 +15,10 @@ const rules = [
     test: /\.s(a|c)ss$/,
     exclude: [/\.module.(s(a|c)ss)$/],
     use: [
-      MiniCssExtractPlugin.loader,
-      "css-loader",
-      "resolve-url-loader",
-      "sass-loader"
+      { loader: MiniCssExtractPlugin.loader },
+      { loader: "css-loader", options: { url: false } },
+      { loader: "resolve-url-loader" },
+      { loader: "sass-loader", options: { url: false } }
     ]
   },
   {
