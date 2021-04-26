@@ -24,7 +24,6 @@ export default function App() {
     e.preventDefault();
     addTodo(value);
     setValue("");
-    console.log("todos", todos);
   };
 
   const setEventTargetValue = (e: any) => setValue(e.target.value);

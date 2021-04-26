@@ -41,6 +41,17 @@ const rules = [
         }
       }
     ]
+  },
+  {
+    test: /\.(png|jpg|eot|woff|woff2|ttf|svg)$/,
+    use: [
+      {
+        loader: "file-loader",
+        options: {
+          outputPath: path.join("static", "media")
+        }
+      }
+    ]
   }
 ];
 
