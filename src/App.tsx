@@ -20,10 +20,6 @@ export default function App() {
     setTodos(newTodos);
   };
 
-  const completeTodo = (index: number) => {
-    const newTodos: ITodo[] = todos;
-  };
-
   const handleSubmit = (e: FormElement): void => {
     e.preventDefault();
     addTodo(value);
