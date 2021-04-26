@@ -22,9 +22,20 @@ const rules = [
       {
         options: {
           name: "[name].[ext]",
-          outputPath: "media/"
+          outputPath: "/public/media/"
         },
         loader: "file-loader"
+      }
+    ]
+  },
+  {
+    test: /\.(jpg|png|gif|woff|eot|ttf|svg)/,
+    use: [
+      {
+        loader: "url-loader", // this need file-loader
+        options: {
+          limit: 50000
+        }
       }
     ]
   }
