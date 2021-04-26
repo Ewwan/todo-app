@@ -6,7 +6,7 @@ const isDevelopment = process.env.NODE_ENV === "development";
 const rules = [
   {
     test: /\.tsx?/,
-    exclude: /node_modules/,
+    exclude: [/(node_modules|dist)/],
     loader: "babel-loader"
   },
   {
