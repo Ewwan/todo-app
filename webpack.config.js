@@ -51,9 +51,8 @@ module.exports = {
   mode: "development",
   entry: "./src/index.tsx",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "/"),
     filename: "bundle.js",
-    publicPath: "/static/"
   },
   module: { rules },
   resolve: { extensions: [".ts", ".tsx", ".js", ".jsx", "css", ".scss"] },
