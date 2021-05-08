@@ -22,6 +22,17 @@ const rules = [
       "sass-loader"
     ]
   },
+    {
+    test: /\.(jpg|png|gif|woff|eot|ttf|svg)/,
+    use: [
+      {
+        loader: "url-loader", // this needs file-loader
+        options: {
+          limit: 50000
+        }
+      }
+    ]
+  },
   {
     test: /\.(png|jpeg|jpg|eot|woff|woff2|ttf)$/,
     use: [
@@ -39,23 +50,24 @@ const rules = [
 module.exports = {
   target: "web",
   mode: "development",
-  entry: path.join(__dirname, "src", "index.tsx"),
-  output: { path: path.join(__dirname, "build"), filename: "bundle.js" },
+  entry: "./src/index.tsx",
+  output: { path: path.resolve(__dirname, "build"), filename: "bundle.js" },
   module: { rules },
   resolve: {
     modules: [path.join(__dirname, "src"), "node_modules"],
     extensions: [".ts", ".tsx", ".js", ".jsx", "css", ".scss"]
   },
   devServer: {
-    contentBase: './',
+    contentBase: "./",
     port: 5000
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "index.html")
+      filename: "index.html",
+      template: "/index.html"
     }),
     new MiniCssExtractPlugin({
-      filename: `path.join('static', 'css')/[name].css`
+      filename: `${path.join('static', 'css')}/[name].css`
     })
   ]
 };
