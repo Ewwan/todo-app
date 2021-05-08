@@ -51,7 +51,7 @@ module.exports = {
   mode: "development",
   entry: "./src/index.tsx",
   output: {
-    path: "/",
+    path: "./",
     filename: "bundle.js",
   },
   module: { rules },
