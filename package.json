@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "@babel/runtime": "7.13.8",
+    "file-loader": "^6.2.0",
     "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^5.3.1",
     "path": "^0.12.7",

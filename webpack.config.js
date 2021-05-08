@@ -28,7 +28,7 @@ const rules = [
       {
         options: {
           name: "[name].[ext]",
-          outputPath: "/public/media/"
+          outputPath: "/public/"
         },
         loader: "file-loader"
       }
@@ -51,7 +51,7 @@ module.exports = {
   target: "web",
   mode: "development",
   entry: path.join(__dirname, "src", "index.tsx"),
-  output: { path: path.resolve(__dirname, "build"), filename: "index.bundle.js" },
+  output: { path: path.resolve(__dirname, "build"), filename: "bundle.js" },
   module: { rules },
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
