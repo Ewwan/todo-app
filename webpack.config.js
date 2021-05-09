@@ -49,13 +49,14 @@ const rules = [
 module.exports = {
   target: "web",
   mode: "development",
-  entry: "/src/index.tsx",
+  entry: "./src/index.tsx",
   output: { path: path.resolve(__dirname, "dist"), filename: "bundle.js" },
   module: { rules },
   resolve: {
     modules: [path.join(__dirname, "src"), "node_modules"],
     extensions: [".ts", ".tsx", ".js", ".jsx", ".css", ".scss"]
   },
+  devtool: "inline-source-map",
   devServer: {
     contentBase: "./src/",
     port: 5000
@@ -65,7 +66,8 @@ module.exports = {
       filename: `${path.join("static", "css")}/[name].css`
     }),
     new HtmlWebpackPlugin({
-      filename: "index.html",
+      inject: true,
+      filename: "./index.html",
       template: "index.html"
     })
   ]
