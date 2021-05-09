@@ -9,5 +9,5 @@ Deployed to GitHub Pages and ready to view <a href="https://ewwan.github.io/todo
 <br/> > This project has been created for educational purpose.
 <br/><br/>
 
-![todo-app](https://user-images.githubusercontent.com/38181460/116878193-4c5c1980-ac1f-11eb-87ea-d1c4be88ea2f.png)
+<a href="https://ewwan.github.io/todo-app/" target="_blank">![todo-app](https://user-images.githubusercontent.com/38181460/116878193-4c5c1980-ac1f-11eb-87ea-d1c4be88ea2f.png)</a>
 
