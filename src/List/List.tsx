@@ -7,7 +7,7 @@ interface ListProps {
   todos: ITodo[];
 }
 
-export default function List({ todos }): ListProps {
+export default function List({ todos }: ListProps) {
   return todos.map((todo: ITodo, index: number) => {
     return (
       <ul className="list" id="list">
