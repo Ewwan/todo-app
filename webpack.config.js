@@ -50,14 +50,14 @@ module.exports = {
   target: "web",
   mode: "development",
   entry: "/src/index.tsx",
-  output: { path: path.resolve(__dirname, "build"), filename: "bundle.js" },
+  output: { path: path.resolve(__dirname, "dist"), filename: "bundle.js" },
   module: { rules },
   resolve: {
     modules: [path.join(__dirname, "src"), "node_modules"],
     extensions: [".ts", ".tsx", ".js", ".jsx", ".css", ".scss"]
   },
   devServer: {
-    contentBase: "./public/",
+    contentBase: "./src/",
     port: 5000
   },
   plugins: [
