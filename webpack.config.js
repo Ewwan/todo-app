@@ -38,8 +38,7 @@ const rules = [
     use: [
       {
         options: {
-          name: "[name].[ext]",
-          outputPath: "/public/media/"
+          name: "[name].[ext]"
         },
         loader: "file-loader"
       }
@@ -55,19 +54,19 @@ module.exports = {
   module: { rules },
   resolve: {
     modules: [path.join(__dirname, "src"), "node_modules"],
-    extensions: [".ts", ".tsx", ".js", ".jsx", "css", ".scss"]
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".css", ".scss"]
   },
   devServer: {
-    contentBase: "./",
+    contentBase: "./public/",
     port: 5000
   },
   plugins: [
+    new MiniCssExtractPlugin({
+      filename: `${path.join("static", "css")}/[name].css`
+    }),
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: "/index.html"
-    }),
-    new MiniCssExtractPlugin({
-      filename: `${path.join('static', 'css')}/[name].css`
+      template: "index.html"
     })
   ]
 };
